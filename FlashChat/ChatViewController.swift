@@ -1,18 +1,20 @@
 //
-//  RegisterViewController.swift
+//  ChatViewController.swift
 //  FlashChat
 //
-//  Created by Bektemur on 11/02/23.
+//  Created by Bektemur Mamashayev on 14/02/23.
 //
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class ChatViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
+    
 
     /*
     // MARK: - Navigation

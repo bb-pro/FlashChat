@@ -1,0 +1,6 @@
+module Pods_FlashChat {
+  umbrella header "Pods-FlashChat-umbrella.h"
+
+  export *
+  module * { export * }
+}
