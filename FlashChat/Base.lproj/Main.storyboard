@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⚡️FlashChat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeK-dX-CCz" customClass="CLTypingLabel" customModule="CLTypingLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⚡️FlashChat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zeK-dX-CCz">
                                 <rect key="frame" x="41.666666666666657" y="396" width="310" height="60"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="42"/>
                                 <color key="textColor" name="BrandBlue"/>
@@ -66,9 +66,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nRg-wV-iWb"/>
-                    <connections>
-                        <outlet property="titleLabel" destination="zeK-dX-CCz" id="TvJ-So-WOp"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,6 +113,9 @@
                                         <state key="normal" title="Register">
                                             <color key="titleColor" name="BrandBlue"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerPressed:" destination="H1s-ud-ASL" eventType="touchUpInside" id="7P9-Q9-GEO"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="Msj-d3-cqM">
                                         <rect key="frame" x="0.0" y="20" width="393" height="137"/>
@@ -157,6 +157,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="gZC-hc-7cw"/>
                     <connections>
+                        <outlet property="emailTF" destination="l0h-yq-Hea" id="xq8-Lb-xEA"/>
+                        <outlet property="passwordTF" destination="aPN-Lg-hvE" id="s4c-Ui-78r"/>
                         <segue destination="FbE-QY-C0e" kind="show" identifier="RegisterToChat" id="iDb-fK-bWU"/>
                     </connections>
                 </viewController>
@@ -215,6 +217,9 @@
                                         <state key="normal" title="Log In">
                                             <color key="titleColor" name="BrandLightBlue"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginPressed:" destination="QeA-0g-oaS" eventType="touchUpInside" id="RQQ-XG-lzs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -247,6 +252,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="P6h-Ll-jap"/>
                     <connections>
+                        <outlet property="emailTF" destination="rkh-oR-SaV" id="nEl-He-OHg"/>
+                        <outlet property="passwordTF" destination="Vrb-Sl-cvy" id="2Jb-VU-6BD"/>
                         <segue destination="FbE-QY-C0e" kind="show" identifier="LoginToChat" id="vmc-On-rOH"/>
                     </connections>
                 </viewController>
@@ -348,11 +355,6 @@
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="zeK-dX-CCz">
-            <size key="intrinsicContentSize" width="260.66666666666669" height="50.333333333333336"/>
-        </designable>
-    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="vmc-On-rOH"/>
     </inferredMetricsTieBreakers>
