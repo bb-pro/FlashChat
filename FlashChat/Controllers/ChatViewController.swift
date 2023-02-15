@@ -13,10 +13,9 @@ class ChatViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var messageTF: UITextField!
     
+    let db = Firestore.firestore()
+    
     var messages: [Message] = [
-               Message(sender: "1@2.com", body: "Hey"),
-               Message(sender: "2@3.com", body: "Hello!"),
-                Message(sender: "1@2.com", body: "WhatsUpp"),
     ]
     
     override func viewDidLoad() {
@@ -30,13 +29,55 @@ class ChatViewController: UIViewController {
         
         
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
+        
+        loadMessages()
+        
+    }
+    func loadMessages() {
+    
+        db.collection(K.FStore.collectionName)
+            .order(by: K.FStore.dateField)
+            .addSnapshotListener { (querySnapshot, error)  in
+
+            self.messages = []
+            
+            if let e = error {
+                print(" There was an issue retrieving data from firestore \(e)")
+            } else {
+                if let snapshotDocuments = querySnapshot?.documents {
+                    for doc in snapshotDocuments {
+                        let data = doc.data()
+                        if let sender = data[K.FStore.senderField] as? String,
+                           let body = data[K.FStore.bodyField] as? String {
+                            self.messages.append(Message(sender: sender, body: body))
+                            
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                        }
+                    }
+                    self.messages.forEach { message in
+                        print(message.sender, message.body)
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
-        if messageTF.text == "" {
-            return
-        } else {
-            messages.append(Message(sender: "1@2.com", body: messageTF.text ?? ""))
+        if let messageBody = messageTF.text, let messageSender = Auth.auth().currentUser?.email {
+            db.collection(K.FStore.collectionName).addDocument(data: [
+                K.FStore.senderField: messageSender,
+                K.FStore.bodyField: messageBody,
+                K.FStore.dateField: Date().timeIntervalSince1970
+            ]) { (error) in
+                if let e = error {
+                    print("There was an issue saving data to firestore, \(e)")
+                } else {
+                    self.tableView.reloadData()
+                }
+            }
+            
         }
     }
     
