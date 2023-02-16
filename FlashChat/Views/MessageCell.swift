@@ -15,7 +15,7 @@ class MessageCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         messageBubble.layer.cornerRadius = 20
-        messageBubble.layer.cornerRadius = messageBubble.frame.size / 5
+        messageBubble.layer.cornerRadius = messageBubble.frame.size.height / 5
         rightImageView.layer.cornerRadius = rightImageView.frame.width / 2
     }
 
