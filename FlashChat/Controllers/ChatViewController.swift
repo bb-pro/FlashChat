@@ -15,8 +15,7 @@ class ChatViewController: UIViewController {
     
     let db = Firestore.firestore()
     
-    var messages: [Message] = [
-    ]
+    var messages: [Message] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,34 +33,34 @@ class ChatViewController: UIViewController {
         
     }
     func loadMessages() {
-    
+        
         db.collection(K.FStore.collectionName)
             .order(by: K.FStore.dateField)
             .addSnapshotListener { (querySnapshot, error)  in
-
-            self.messages = []
-            
-            if let e = error {
-                print(" There was an issue retrieving data from firestore \(e)")
-            } else {
-                if let snapshotDocuments = querySnapshot?.documents {
-                    for doc in snapshotDocuments {
-                        let data = doc.data()
-                        if let sender = data[K.FStore.senderField] as? String,
-                           let body = data[K.FStore.bodyField] as? String {
-                            self.messages.append(Message(sender: sender, body: body))
-                            
-                            DispatchQueue.main.async {
-                                self.tableView.reloadData()
+                
+                self.messages = []
+                
+                if let e = error {
+                    print(" There was an issue retrieving data from firestore \(e)")
+                } else {
+                    if let snapshotDocuments = querySnapshot?.documents {
+                        for doc in snapshotDocuments {
+                            let data = doc.data()
+                            if let sender = data[K.FStore.senderField] as? String,
+                               let body = data[K.FStore.bodyField] as? String {
+                                self.messages.append(Message(sender: sender, body: body))
+                                
+                                DispatchQueue.main.async {
+                                    self.tableView.reloadData()
+                                }
                             }
                         }
-                    }
-                    self.messages.forEach { message in
-                        print(message.sender, message.body)
+                        self.messages.forEach { message in
+                            print(message.sender, message.body)
+                        }
                     }
                 }
             }
-        }
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
@@ -114,15 +113,28 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell  = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath)
-        if let messageCell = cell as? MessageCell {
-            messageCell.label.text = messages[indexPath.row].body
-            return messageCell
+        let message = messages[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
+        cell.label.text = message.body
+        
+        //This is a message from current user
+        if message.sender == Auth.auth().currentUser?.email {
+            cell.leftImageView.isHidden = true
+            cell.rightImageView.isHidden = false
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.lightPurple)
+            } else {
+            cell.leftImageView.isHidden = false
+            cell.rightImageView.isHidden = true
+            cell.messageBubble.backgroundColor = UIColor(named: K.BrandColors.purple)
+         
         }
+        
         return cell
+        
     }
-    
 }
+    
 extension ChatViewController: UITableViewDelegate {
     
 }
