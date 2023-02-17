@@ -159,7 +159,7 @@
                     <connections>
                         <outlet property="emailTF" destination="l0h-yq-Hea" id="xq8-Lb-xEA"/>
                         <outlet property="passwordTF" destination="aPN-Lg-hvE" id="s4c-Ui-78r"/>
-                        <segue destination="tXV-Br-Pmm" kind="show" identifier="RegisterToChat" id="UEf-mF-Kg6"/>
+                        <segue destination="tXV-Br-Pmm" kind="presentation" identifier="RegisterToChat" modalPresentationStyle="fullScreen" id="UEf-mF-Kg6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2l-Nw-4Pz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -254,7 +254,7 @@
                     <connections>
                         <outlet property="emailTF" destination="rkh-oR-SaV" id="nEl-He-OHg"/>
                         <outlet property="passwordTF" destination="Vrb-Sl-cvy" id="2Jb-VU-6BD"/>
-                        <segue destination="tXV-Br-Pmm" kind="show" identifier="LoginToChat" id="c9Y-zf-8nS"/>
+                        <segue destination="tXV-Br-Pmm" kind="presentation" identifier="LoginToChat" modalPresentationStyle="fullScreen" id="c9Y-zf-8nS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VGM-ie-8Sq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -270,7 +270,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pCH-eU-nsv">
-                                <rect key="frame" x="0.0" y="103" width="393" height="606"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="650"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dm8-2d-JxO">
@@ -347,14 +347,67 @@
                     <view key="view" contentMode="scaleToFill" id="c0L-Yn-s19">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="MLi-N1-Vlf">
+                                <rect key="frame" x="16" y="203.33333333333337" width="134" height="164"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atZ-Nw-7dO">
+                                        <rect key="frame" x="0.0" y="0.0" width="33.333333333333336" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Имя и Фамилия" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2fe-oX-UCU">
+                                        <rect key="frame" x="0.0" y="43.333333333333314" width="134" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш логин" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQd-Tt-Avm">
+                                        <rect key="frame" x="0.0" y="100.33333333333334" width="84.333333333333329" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fN6-sd-lBT">
+                                        <rect key="frame" x="0.0" y="143.66666666666666" width="56.333333333333336" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="VM2-3c-nTI">
+                                <rect key="frame" x="277.33333333333331" y="307" width="99.666666666666686" height="59.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1@2.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFk-U9-f74">
+                                        <rect key="frame" x="0.0" y="0.0" width="69.666666666666671" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neymar2002" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="riu-8R-5fp">
+                                        <rect key="frame" x="0.0" y="39.333333333333314" width="99.666666666666671" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="hfB-3V-1eg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MLi-N1-Vlf" firstAttribute="top" secondItem="hfB-3V-1eg" secondAttribute="top" constant="40" id="4Wb-8a-g98"/>
+                            <constraint firstItem="MLi-N1-Vlf" firstAttribute="leading" secondItem="hfB-3V-1eg" secondAttribute="leading" constant="16" id="OOd-qV-rLV"/>
+                            <constraint firstItem="hfB-3V-1eg" firstAttribute="trailing" secondItem="VM2-3c-nTI" secondAttribute="trailing" constant="16" id="imp-y7-1Sr"/>
+                            <constraint firstItem="VM2-3c-nTI" firstAttribute="top" secondItem="hfB-3V-1eg" secondAttribute="top" constant="143.66999999999999" id="ycU-RJ-umI"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Профиль" image="person" catalog="system" id="9eW-Bb-aiJ"/>
+                    <navigationItem key="navigationItem" title="Профиль" id="GKH-fw-1ZT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fTJ-nV-sph" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4686" y="-2"/>
+            <point key="canvasLocation" x="5611.4503816793895" y="-2.1126760563380285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yF2-RS-rsO">
@@ -388,12 +441,31 @@
                     </tabBar>
                     <connections>
                         <segue destination="FbE-QY-C0e" kind="relationship" relationship="viewControllers" id="eV9-Zc-UhR"/>
-                        <segue destination="QK6-Hq-nJg" kind="relationship" relationship="viewControllers" id="jo9-up-1fA"/>
+                        <segue destination="MhD-2R-xlJ" kind="relationship" relationship="viewControllers" id="jo9-up-1fA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUx-UV-rqr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2878.6259541984732" y="-2.1126760563380285"/>
+        </scene>
+        <!--Профиль-->
+        <scene sceneID="A1F-f9-8om">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MhD-2R-xlJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Профиль" id="9eW-Bb-aiJ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="avf-1d-H05">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QK6-Hq-nJg" kind="relationship" relationship="rootViewController" id="f4X-yR-59J"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yBo-63-56g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4684.7328244274804" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -402,7 +474,6 @@
     <resources>
         <image name="message" catalog="system" width="128" height="116"/>
         <image name="paperplane.fill" catalog="system" width="128" height="119"/>
-        <image name="person" catalog="system" width="128" height="121"/>
         <image name="textfield" width="298" height="93"/>
         <namedColor name="BrandBlue">
             <color red="0.16500000655651093" green="0.77999997138977051" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
