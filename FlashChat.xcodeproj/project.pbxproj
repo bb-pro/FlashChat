@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8051BE1E299FA768001677B4 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8051BE1D299FA768001677B4 /* TabBarViewController.swift */; };
+		806270EF299FA0D60039D814 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806270EE299FA0D60039D814 /* ProfileViewController.swift */; };
 		808D23F3299D39EA00593C0F /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 808D23F2299D39EA00593C0F /* IQKeyboardManagerSwift */; };
 		80922EEE299CBEC000EF442D /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80922EED299CBEC000EF442D /* K.swift */; };
 		809506F6299CC4250060661A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809506F5299CC4250060661A /* Message.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8051BE1D299FA768001677B4 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		806270EE299FA0D60039D814 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		80922EED299CBEC000EF442D /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		809506F5299CC4250060661A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		809506F8299CCCBF0060661A /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				ED55DB072997601A00C15127 /* RegisterViewController.swift */,
 				ED55DB092997608100C15127 /* LoginViewController.swift */,
 				80DDF71A299B58FD0030AD2C /* ChatViewController.swift */,
+				806270EE299FA0D60039D814 /* ProfileViewController.swift */,
+				8051BE1D299FA768001677B4 /* TabBarViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -205,6 +211,8 @@
 			files = (
 				EDE038BA29975C0B0035C121 /* WelcomeViewController.swift in Sources */,
 				EDE038B629975C0B0035C121 /* AppDelegate.swift in Sources */,
+				8051BE1E299FA768001677B4 /* TabBarViewController.swift in Sources */,
+				806270EF299FA0D60039D814 /* ProfileViewController.swift in Sources */,
 				EDE038B829975C0B0035C121 /* SceneDelegate.swift in Sources */,
 				ED55DB0A2997608100C15127 /* LoginViewController.swift in Sources */,
 				80922EEE299CBEC000EF442D /* K.swift in Sources */,
@@ -366,7 +374,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -395,7 +403,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

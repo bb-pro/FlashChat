@@ -271,7 +271,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pCH-eU-nsv">
                                 <rect key="frame" x="0.0" y="59" width="393" height="650"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.70593291520000001" green="0.9352217317" blue="0.89284050459999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dm8-2d-JxO">
                                 <rect key="frame" x="0.0" y="709" width="393" height="60"/>
@@ -343,67 +343,63 @@
         <!--Профиль-->
         <scene sceneID="Jcb-qk-ZYw">
             <objects>
-                <viewController id="QK6-Hq-nJg" sceneMemberID="viewController">
+                <viewController id="QK6-Hq-nJg" customClass="ProfileViewController" customModule="FlashChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c0L-Yn-s19">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 5" translatesAutoresizingMaskIntoConstraints="NO" id="sTT-rR-Lcv">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="MLi-N1-Vlf">
-                                <rect key="frame" x="16" y="195" width="134" height="164"/>
+                                <rect key="frame" x="16" y="195" width="134" height="150.33333333333337"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atZ-Nw-7dO">
-                                        <rect key="frame" x="0.0" y="0.0" width="33.333333333333336" height="20.333333333333332"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atZ-Nw-7dO">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Имя и Фамилия" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2fe-oX-UCU">
-                                        <rect key="frame" x="0.0" y="43.333333333333343" width="134" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя и Фамилия" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2fe-oX-UCU">
+                                        <rect key="frame" x="0.0" y="73" width="134" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш логин" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQd-Tt-Avm">
-                                        <rect key="frame" x="0.0" y="100.33333333333331" width="84.333333333333329" height="20.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fN6-sd-lBT">
-                                        <rect key="frame" x="0.0" y="143.66666666666669" width="56.333333333333336" height="20.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="130" width="84.333333333333329" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="VM2-3c-nTI">
-                                <rect key="frame" x="277.33333333333331" y="298.66666666666669" width="99.666666666666686" height="59.666666666666686"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1@2.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFk-U9-f74">
-                                        <rect key="frame" x="0.0" y="0.0" width="69.666666666666671" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neymar2002" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="riu-8R-5fp">
-                                        <rect key="frame" x="0.0" y="39.333333333333314" width="99.666666666666671" height="20.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email@login.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFk-U9-f74">
+                                <rect key="frame" x="247" y="325" width="129.66666666666663" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hfB-3V-1eg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="mFk-U9-f74" firstAttribute="top" secondItem="hfB-3V-1eg" secondAttribute="top" constant="170" id="41V-fj-Ue6"/>
                             <constraint firstItem="MLi-N1-Vlf" firstAttribute="top" secondItem="hfB-3V-1eg" secondAttribute="top" constant="40" id="4Wb-8a-g98"/>
+                            <constraint firstItem="mFk-U9-f74" firstAttribute="leading" secondItem="MLi-N1-Vlf" secondAttribute="trailing" constant="97" id="5k6-J7-mlw"/>
                             <constraint firstItem="MLi-N1-Vlf" firstAttribute="leading" secondItem="hfB-3V-1eg" secondAttribute="leading" constant="16" id="OOd-qV-rLV"/>
-                            <constraint firstItem="hfB-3V-1eg" firstAttribute="trailing" secondItem="VM2-3c-nTI" secondAttribute="trailing" constant="16" id="imp-y7-1Sr"/>
-                            <constraint firstItem="VM2-3c-nTI" firstAttribute="top" secondItem="hfB-3V-1eg" secondAttribute="top" constant="143.66999999999999" id="ycU-RJ-umI"/>
+                            <constraint firstItem="sTT-rR-Lcv" firstAttribute="leading" secondItem="hfB-3V-1eg" secondAttribute="leading" id="U2e-dH-WSE"/>
+                            <constraint firstItem="sTT-rR-Lcv" firstAttribute="top" secondItem="c0L-Yn-s19" secondAttribute="top" id="bmD-Eb-tdH"/>
+                            <constraint firstItem="sTT-rR-Lcv" firstAttribute="trailing" secondItem="hfB-3V-1eg" secondAttribute="trailing" id="jug-An-Rp0"/>
+                            <constraint firstItem="hfB-3V-1eg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mFk-U9-f74" secondAttribute="trailing" id="nCf-k4-bV4"/>
+                            <constraint firstAttribute="bottom" secondItem="sTT-rR-Lcv" secondAttribute="bottom" id="z0X-Ah-3PH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Профиль" id="GKH-fw-1ZT"/>
+                    <connections>
+                        <outlet property="loginLabel" destination="mFk-U9-f74" id="3OF-Vl-JTr"/>
+                        <outlet property="nameLabel" destination="atZ-Nw-7dO" id="hOe-E8-cmu"/>
+                        <outlet property="nameTF" destination="2fe-oX-UCU" id="fHK-2t-QmJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fTJ-nV-sph" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -428,10 +424,10 @@
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="Dk9-DE-CHG">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="tXV-Br-Pmm" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="tXV-Br-Pmm" customClass="TabBarViewController" customModule="FlashChat" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="uQE-gT-eYm"/>
                     <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kSU-18-MJD">
@@ -453,7 +449,7 @@
         <scene sceneID="A1F-f9-8om">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MhD-2R-xlJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Профиль" id="9eW-Bb-aiJ"/>
+                    <tabBarItem key="tabBarItem" title="Профиль" image="person" catalog="system" id="9eW-Bb-aiJ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="avf-1d-H05">
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>
@@ -473,8 +469,10 @@
         <segue reference="UEf-mF-Kg6"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Image 5" width="800" height="1422"/>
         <image name="message" catalog="system" width="128" height="116"/>
         <image name="paperplane.fill" catalog="system" width="128" height="119"/>
+        <image name="person" catalog="system" width="128" height="121"/>
         <image name="textfield" width="298" height="93"/>
         <namedColor name="BrandBlue">
             <color red="0.16500000655651093" green="0.77999997138977051" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
