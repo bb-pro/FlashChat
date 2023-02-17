@@ -111,7 +111,7 @@ extension ChatViewController: UITextFieldDelegate {
     }
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         if messageTF.text == "" {
-            return false
+            return true
         } else {
             messages.append(Message(sender: "1@2.com", body: messageTF.text ?? ""))
             print(messages)
