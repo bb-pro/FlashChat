@@ -159,7 +159,7 @@
                     <connections>
                         <outlet property="emailTF" destination="l0h-yq-Hea" id="xq8-Lb-xEA"/>
                         <outlet property="passwordTF" destination="aPN-Lg-hvE" id="s4c-Ui-78r"/>
-                        <segue destination="FbE-QY-C0e" kind="show" identifier="RegisterToChat" id="UEf-mF-Kg6"/>
+                        <segue destination="tXV-Br-Pmm" kind="show" identifier="RegisterToChat" id="UEf-mF-Kg6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2l-Nw-4Pz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -254,7 +254,7 @@
                     <connections>
                         <outlet property="emailTF" destination="rkh-oR-SaV" id="nEl-He-OHg"/>
                         <outlet property="passwordTF" destination="Vrb-Sl-cvy" id="2Jb-VU-6BD"/>
-                        <segue destination="FbE-QY-C0e" kind="show" identifier="LoginToChat" id="c9Y-zf-8nS"/>
+                        <segue destination="tXV-Br-Pmm" kind="show" identifier="LoginToChat" id="c9Y-zf-8nS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VGM-ie-8Sq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -270,11 +270,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pCH-eU-nsv">
-                                <rect key="frame" x="0.0" y="103" width="393" height="655"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="606"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dm8-2d-JxO">
-                                <rect key="frame" x="0.0" y="758" width="393" height="60"/>
+                                <rect key="frame" x="0.0" y="709" width="393" height="60"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pYs-N6-Oxl">
                                         <rect key="frame" x="20" y="20" width="293" height="40"/>
@@ -323,6 +323,7 @@
                             <constraint firstItem="pCH-eU-nsv" firstAttribute="leading" secondItem="X2e-Om-raD" secondAttribute="leading" id="kPN-jh-hc8"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Чаты" image="message" catalog="system" id="UbF-zB-LZg"/>
                     <navigationItem key="navigationItem" title="⚡️FlashChat" largeTitleDisplayMode="always" id="tkw-Ue-aY1">
                         <barButtonItem key="rightBarButtonItem" title="Log out" id="pM5-Al-1WE">
                             <connections>
@@ -337,7 +338,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sty-Vx-gCj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2789" y="13"/>
+            <point key="canvasLocation" x="3805.3435114503814" y="-2.1126760563380285"/>
+        </scene>
+        <!--Профиль-->
+        <scene sceneID="Jcb-qk-ZYw">
+            <objects>
+                <viewController id="QK6-Hq-nJg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c0L-Yn-s19">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="hfB-3V-1eg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Профиль" image="person" catalog="system" id="9eW-Bb-aiJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fTJ-nV-sph" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4686" y="-2"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yF2-RS-rsO">
@@ -347,6 +364,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dxs-ue-7Uc">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="BrandBlue"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -357,12 +375,34 @@
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Dk9-DE-CHG">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="tXV-Br-Pmm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="uQE-gT-eYm"/>
+                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kSU-18-MJD">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="FbE-QY-C0e" kind="relationship" relationship="viewControllers" id="eV9-Zc-UhR"/>
+                        <segue destination="QK6-Hq-nJg" kind="relationship" relationship="viewControllers" id="jo9-up-1fA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hUx-UV-rqr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2878.6259541984732" y="-2.1126760563380285"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="c9Y-zf-8nS"/>
+        <segue reference="UEf-mF-Kg6"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="message" catalog="system" width="128" height="116"/>
         <image name="paperplane.fill" catalog="system" width="128" height="119"/>
+        <image name="person" catalog="system" width="128" height="121"/>
         <image name="textfield" width="298" height="93"/>
         <namedColor name="BrandBlue">
             <color red="0.16500000655651093" green="0.77999997138977051" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
