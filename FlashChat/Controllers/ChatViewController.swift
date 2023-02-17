@@ -32,6 +32,14 @@ class ChatViewController: UIViewController {
         loadMessages()
         
     }
+    
+    // Метод для скрытия клавиатуры тапом по экрану
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    
     func loadMessages() {
         
         db.collection(K.FStore.collectionName)
