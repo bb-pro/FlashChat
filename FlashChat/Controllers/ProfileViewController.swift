@@ -11,7 +11,6 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var nameTF: UITextField!
     @IBOutlet var loginLabel: UILabel!
-    @IBOutlet var passwordLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
     
     
@@ -19,8 +18,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         nameTF.delegate = self
         loginLabel.text = Auth.auth().currentUser?.email
-        passwordLabel.text = Auth.auth().currentUser?.displayName
-    }
+        
+        }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         nameLabel.text = nameTF.text
