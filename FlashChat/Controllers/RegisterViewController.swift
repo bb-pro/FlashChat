@@ -19,8 +19,6 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
  
     }
-
-
     @IBAction func registerPressed(_ sender: UIButton) {
         
         if let email = emailTF.text, let password = passwordTF.text {
@@ -35,5 +33,4 @@ class RegisterViewController: UIViewController {
             }
         }
     }
-    
 }
