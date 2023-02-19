@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.isNavigationBarHidden = false
     }
     
     @IBAction func loginPressed(_ sender: UIButton) {
@@ -30,5 +31,4 @@ class LoginViewController: UIViewController {
             
         }
     }
-    
 }
