@@ -419,7 +419,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Выйти из аккаунта"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="EXq-b6-aFd"/>
+                                    <action selector="logOut" destination="3zI-aQ-YjC" eventType="touchUpInside" id="nkd-Mh-qCd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -432,6 +432,7 @@
                             <constraint firstItem="ETn-bS-h5M" firstAttribute="top" secondItem="Xwx-v9-GOR" secondAttribute="top" constant="200" id="Hhg-MB-7oD"/>
                             <constraint firstItem="uPU-PT-Qpz" firstAttribute="centerX" secondItem="U6b-XC-IIT" secondAttribute="centerX" id="PRv-Z7-A0F"/>
                             <constraint firstItem="p02-vV-STI" firstAttribute="top" secondItem="Xwx-v9-GOR" secondAttribute="top" constant="200" id="ZiT-xk-xRf"/>
+                            <constraint firstItem="p02-vV-STI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ETn-bS-h5M" secondAttribute="trailing" constant="8" symbolic="YES" id="oUz-HF-XWt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Настройки" id="Bla-Wx-fKr"/>
@@ -525,7 +526,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="UEf-mF-Kg6"/>
-        <segue reference="6NB-3O-dew"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="gear" catalog="system" width="128" height="122"/>

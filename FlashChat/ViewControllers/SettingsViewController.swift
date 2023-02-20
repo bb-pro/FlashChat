@@ -31,8 +31,7 @@ class SettingsViewController: UIViewController {
         }
 
     }
-    
-    @IBAction override func unwind(for unwindSegue: UIStoryboardSegue, towards subsequentVC: UIViewController) {
+    @IBAction func logOut() {
         dismiss(animated: true)
     }
 }
