@@ -338,7 +338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sty-Vx-gCj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3883" y="-3"/>
+            <point key="canvasLocation" x="3586" y="-3"/>
         </scene>
         <!--Профиль-->
         <scene sceneID="Jcb-qk-ZYw">
@@ -392,7 +392,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fTJ-nV-sph" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5611.4503816793895" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="5260" y="-3"/>
         </scene>
         <!--Настройки-->
         <scene sceneID="qQx-HU-NS8">
@@ -483,7 +483,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUx-UV-rqr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2878.6259541984732" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="2817" y="-3"/>
         </scene>
         <!--Профиль-->
         <scene sceneID="A1F-f9-8om">
@@ -502,7 +502,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yBo-63-56g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4684.7328244274804" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="4366" y="-3"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Qel-5k-8JN">
